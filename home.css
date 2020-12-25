@@ -1,0 +1,35 @@
+body{
+  background-color: #192a56;
+}
+h1,h2{
+text-align: center;
+color: white;
+}
+.button{
+  padding: 120px;
+}
+.login {
+	box-shadow: 0px 14px 8px -4px #276873;
+	background:linear-gradient(to bottom, #192a56 5%, #408c99 100%);
+	background-color:#192a56;
+	border-radius:24px;
+	border:1px solid #29668f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	font-style:italic;
+	padding:20px 52px;
+	text-decoration:none;
+	text-shadow:0px 5px 0px #3d768a;
+}
+.login:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.login:active {
+	position:relative;
+	top:1px;
+}
