@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Home</title>
-    <link rel="stylesheet" href="home.css" type="text/css">
+    <link rel="stylesheet" href="css\home.css" type="text/css">
   </head>
   <body>
     <h1>Welcome to the Dormitory Management Portal</h1>
