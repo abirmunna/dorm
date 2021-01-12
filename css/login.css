@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: url('train.jpg');
+  background-position: center;
+  background-size: cover;
+  font-family: sans-serif;
+  margin-top: 80px;
+}
+.regform{
+  height: 600px;
+  width: 600px;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: auto;
+  color: #FFFFFF;
+
+  text-align: center;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.main{
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 545px;
+  width: 600px;
+
+}
+  form{
+    padding-left: 10px;
+  }
+.name{
+
+    margin-left: 70px;
+    margin-top: 20px;
+    width: 125px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600px;
+    text-align: justify;
+    line-height: 12px;
+
+  }
+.namea{
+    position: relative;
+    left: 40px;
+    top: -37px;
+    line-height: 40px;
+    width: 300px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+  }
+.username{
+    position: relative;
+    left: 40px;
+    top: -37px;
+    line-height: 40px;
+    width: 300px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+  }
+.email{
+    position: relative;
+    left: 40px;
+    top: -37px;
+    line-height: 40px;
+    width: 300px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+  }
+.code{
+    position: relative;
+    left: 40px;
+    top: -37px;
+    line-height: 40px;
+    width: 300px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+  }
+.pass_1{
+    position: relative;
+    left: 40px;
+    top: -37px;
+    line-height: 40px;
+    width: 300px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+  }
+.pass_2{
+    position: relative;
+    left: 40px;
+    top: -37px;
+    line-height: 40px;
+    width: 300px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+  }
+button{
+  background-color: #9932CC;
+/*  display: block;*/
+  text-align: center;
+  font-size: 20px;
+  border-radius: 25px;
+  border: 2px solid #FFE4C4;
+  padding: 10px 70px;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.25px;
+}
+button:hover{
+  background-color: #1E90FF;
+}
