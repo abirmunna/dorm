@@ -1,24 +1,45 @@
-
- <html>
-   <head>
-     <title>Registration</title>
-     <link rel="stylesheet" href="../css/registration.css">
-   </head>
-   <body>
-     <div class="regform"><br><h1>Login</h1>
-       <div class="main">
-         <form action="../handler/login_handler.php" method="POST">
-
-          <h2 class="name">Username :</h2>
-          <input class="username" type="text" name="username" placeholder="Enter a username">
-
-           <h2 class="name">Password :</h2>
-           <input class="pass_1" type="password" name="pass_1" placeholder="Enter your password">
-           <br>
-           <button type="submit" name="login">Sign In</button>
-         </form>
-       </div>
-     </div>
-
-   </body>
- </html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animated Login Form</title>
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="wave" src="../img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="../img/bg.svg">
+		</div>
+		<div class="login-content">
+			<form action="index.html">
+				<img src="../img/avatar.svg">
+				<h2 class="title">Welcome</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" class="input">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i">
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input">
+            	   </div>
+            	</div>
+            	<a href="#">Forgot Password?</a>
+            	<input type="submit" class="btn" value="Login">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/login.js"></script>
+</body>
+</html>
