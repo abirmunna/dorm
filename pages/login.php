@@ -10,12 +10,12 @@
 	<script type="text/javascript">
 	function validate() {
 		if( document.myForm.uname.value == "" ) {
-             alert( "Please provide your Username and Password!" );
-						 document.getElementById("name").style.color = "red";
-             document.myForm.uname.focus() ;
+          alert( "Please provide your Username and Password!" );
+					document.getElementById("name").style.color = "red";
+          document.myForm.uname.focus() ;
     		 return false;
           }
-		else if (document.myForm.uname.value !== "") {
+		if (document.myForm.uname.value !== "") {
 					document.getElementById("name").style.color = "gray";
 			}
 		if( document.myForm.pwd.value == "" ) {
@@ -24,14 +24,13 @@
 				  document.myForm.pwd.focus() ;
 				 return false;
 			}
-		else if (document.myForm.pwd.value !== "") {
+		if (document.myForm.pwd.value !== "") {
 	 				document.getElementById("pwd").style.color = "gray";
 	 		}
 
-	 return( true );
+	 return(true);
 }
-
-	</script>
+</script>
 </head>
 <body>
 	<img class="wave" src="../img/wave.png">
@@ -40,7 +39,7 @@
 			<img src="../img/bg.svg">
 		</div>
 		<div class="login-content">
-			<form name = "login_form" action="../handler/login_handler.php" method="post">
+			<form name = "myForm" action="../handler/login_handler.php" method="post" onsubmit = "return(validate());">
 				<img src="../img/avatar.svg">
 				<h2 class="title">Welcome to Dormitory Management System<br>Login to Continue</h2>
            		<div class="input-div one">
