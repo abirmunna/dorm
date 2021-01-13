@@ -27,7 +27,7 @@
 		else if (document.myForm.pwd.value !== "") {
 	 				document.getElementById("pwd").style.color = "gray";
 	 		}
-document.forms["login_form"].reset();
+
 	 return( true );
 }
 
@@ -49,7 +49,7 @@ document.forms["login_form"].reset();
            		   </div>
            		   <div class="div">
            		   		<h5 id="name" >Username</h5>
-           		   		<input name="uname" type="text" class="input" placeholder="">
+           		   		<input name="uname" type="text" class="input">
            		   </div>
            		</div>
            		<div class="input-div pass">
