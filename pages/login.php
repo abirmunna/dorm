@@ -27,8 +27,10 @@
 		else if (document.myForm.pwd.value !== "") {
 	 				document.getElementById("pwd").style.color = "gray";
 	 		}
+document.forms["login_form"].reset();
 	 return( true );
 }
+
 	</script>
 </head>
 <body>
@@ -38,7 +40,7 @@
 			<img src="../img/bg.svg">
 		</div>
 		<div class="login-content">
-			<form name = "myForm" action="../handler/login_handler.php" onsubmit = "return(validate());" method="post">
+			<form name = "login_form" action="../handler/login_handler.php" onsubmit = "return(validate());" method="post">
 				<img src="../img/avatar.svg">
 				<h2 class="title">Welcome to Dormitory Management System<br>Login to Continue</h2>
            		<div class="input-div one">
@@ -47,7 +49,7 @@
            		   </div>
            		   <div class="div">
            		   		<h5 id="name" >Username</h5>
-           		   		<input name="uname" type="text" class="input">
+           		   		<input name="uname" type="text" class="input" placeholder="">
            		   </div>
            		</div>
            		<div class="input-div pass">
