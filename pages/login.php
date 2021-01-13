@@ -40,7 +40,7 @@
 			<img src="../img/bg.svg">
 		</div>
 		<div class="login-content">
-			<form name = "login_form" action="../handler/login_handler.php" onsubmit = "return(validate());" method="post">
+			<form name = "login_form" action="../handler/login_handler.php" method="post">
 				<img src="../img/avatar.svg">
 				<h2 class="title">Welcome to Dormitory Management System<br>Login to Continue</h2>
            		<div class="input-div one">
