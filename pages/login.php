@@ -60,7 +60,7 @@
            		    	<input name="pwd" type="password" class="input">
             	   </div>
             	</div>
-            	<a href="#">Forgot Password?</a>
+            	<a href="forget.php">Forgot Password?</a>
             	<button type="submit" class="btn" value="submit">Login</button>
 
             </form>
