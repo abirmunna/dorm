@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="../css/notify.css">
+    <link rel="stylesheet" href="../../css/notify.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script type="text/javascript">
