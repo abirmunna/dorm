@@ -30,6 +30,15 @@
 
 	 return(true);
 }
+<?php
+	$q=strval($_GET['q']);
+	if($q){
+		$q = "Invalid Username or Password";
+	}
+	else{
+		$q="";
+	}
+ ?>
 </script>
 </head>
 <body>
@@ -60,6 +69,7 @@
            		    	<input name="pwd" type="password" class="input">
             	   </div>
             	</div>
+							<?php echo"<p style='color:red'>" . $q . "</p>"; ?>
             	<a href="forget.php">Forgot Password?</a>
             	<button type="submit" class="btn" value="submit">Login</button>
 

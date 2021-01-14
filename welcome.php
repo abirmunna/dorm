@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -19,14 +19,8 @@
 
     <div style="margin-left:10%">
       <div class="w3-container w3-teal">
-        <h3>Welcome <?php
-        if(isset($_SESSION['uname'])){
-          echo($_SESSION['uname']);
-        }
-          else {
-            header("location: index.php");
-          }
-         ?>
+        <h3>Welcome 
+
        </h3>
        <p align= "right"><a href="logout.php" class="w3-bar-item w3-button w3-green">logout</a></p>
      </div>
