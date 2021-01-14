@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="../css/forget.css">
+    <link rel="stylesheet" href="../css/notify.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script type="text/javascript">
     function validate() {
   		if( document.myForm.std_id.value == "" ) {
-            alert( "Please provide your Id!" );
+            alert( "Please provide student Id!" );
   					document.getElementById("std_id").style.color = "yellow";
             document.myForm.std_id.focus() ;
       		 return false;
@@ -17,14 +17,14 @@
   		if (document.myForm.std_id.value !== "") {
   					document.getElementById("std_id").style.color = "gray";
   			}
-  		if( document.myForm.std_email.value == "" ) {
-  				  alert( "Please provide your Email Address!" );
-  					document.getElementById("std_email").style.color = "yellow";
-  				  document.myForm.std_email.focus() ;
+  		if( document.myForm.msg.value == "" ) {
+  				  alert( "Please write a message!" );
+  					document.getElementById("msg").style.color = "yellow";
+  				  document.myForm.msg.focus() ;
   				 return false;
   			}
-  		if (document.myForm.std_email.value !== "") {
-  	 				document.getElementById("std_email").style.color = "gray";
+  		if (document.myForm.msg.value !== "") {
+  	 				document.getElementById("msg").style.color = "gray";
   	 		}
 
   	 return(true);
@@ -36,22 +36,22 @@
       <div class="wrapper">
   	<div class="registration_form">
   		<div class="title">
-  			Recover Password
+  			Student Notifications :
   		</div>
 
-  		<form name = "myForm" action="../handler/forget_handler.php" method="post" onsubmit = "return(validate());">
+  		<form name = "myForm" action="../handler/notify_handler.php" method="post" onsubmit = "return(validate());">
   			<div class="form_wrap">
   					<div class="input_wrap">
   						<label id="std_id">Student ID</label>
-  						<input type="text" name="std_id" id="std_id" placeholder="Enter your Id">
+  						<input type="text" name="std_id" id="std_id" placeholder="Enter student Id">
   					</div>
   					<div class="input_wrap">
-  						<label id="std_email">Email</label>
-  						<input type="text" name="std_email" id="std_email" placeholder="Enter your Email Address">
+  						<label id="msg">Message</label>
+  						<input type="text" name="msg" id="msg" placeholder="Enter your message">
   					</div>
 
   				<div class="input_wrap">
-  					<input type="submit" value="Recover now" class="submit_btn">
+  					<input type="submit" value="Send Message" class="submit_btn">
   				</div>
   			</div>
   		</form>
