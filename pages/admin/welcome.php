@@ -9,8 +9,12 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
 <body>
+  <div>
+  <?php include "ad_nav.php" ?>
+  </div>
+
 <div>
-  
+  <h1>Hi admin</h1>
 </div>
 </body>
 </html>
