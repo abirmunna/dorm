@@ -11,6 +11,9 @@ if (isset($_SESSION['id'])) {
     $name = $get['std_name'];
   }
 }
+else {
+  header("location:../login.php");
+}
  ?>
 <!DOCTYPE html>
 
@@ -21,8 +24,6 @@ if (isset($_SESSION['id'])) {
   <style media="screen">
 
     .main{
-
-
       width: 60%;
       font-size: 20px;
       margin-left: 30%;
@@ -75,11 +76,40 @@ if (isset($_SESSION['id'])) {
       text-align: left;
       margin-left: 50px;
     }
+    .container{
+      background-color: transparent;
+      width: 150px;
+      height: 50px;
+      perspective: 1000px;
+      margin-left: 88%;
+    }
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 10px;
+      margin-top: 30px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      border-radius: 30px;
+    }
+    .button2:hover {
+      box-shadow: 0 12px 16px 0 #266e2f,0 17px 50px 0 #266e2f;
+    }
   </style>
 <body>
 
   <div>
   <?php include "std_nav.php" ?>
+  </div>
+  <div class="container">
+  <a href="logout.php"><button class="button button2">Log Out</button></a>  
   </div>
   <div class="main">
     <br><br>
