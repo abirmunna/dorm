@@ -33,7 +33,7 @@
   </head>
   <body>
     <div class="background">
-      <div class="wrapper">
+      <div class="wrapper1">
   	<div class="registration_form">
   		<div class="title">
   			Recover Password
@@ -52,6 +52,7 @@
 
   				<div class="input_wrap">
   					<input type="submit" value="Recover now" class="submit_btn">
+
   				</div>
   			</div>
   		</form>
@@ -60,3 +61,10 @@
   </div>
   </body>
 </html>
+<script type="text/javascript">
+<?php
+	$q=strval($_GET['q']);
+ ?>
+var q = "<?php echo $q ?>"
+alert(q);
+</script>
