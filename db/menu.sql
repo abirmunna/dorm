@@ -27,16 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `menu`
 --
 
-CREATE TABLE `menu` (
-  `day` varchar(255) NOT NULL,
-  `breakfast_item` varchar(255) NOT NULL,
-  `lunch_item` varchar(255) NOT NULL,
-  `dinner_item` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `menu`
---
 
 INSERT INTO `menu` (`day`, `breakfast_item`, `lunch_item`, `dinner_item`) VALUES
 ('Friday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Birani', 'Rice, Chicken'),
@@ -53,10 +44,7 @@ INSERT INTO `menu` (`day`, `breakfast_item`, `lunch_item`, `dinner_item`) VALUES
 
 --
 -- Indexes for table `menu`
---
-ALTER TABLE `menu`
-  ADD PRIMARY KEY (`day`);
-COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
