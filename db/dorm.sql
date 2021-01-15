@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2021 at 09:57 AM
+-- Generation Time: Jan 15, 2021 at 05:21 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -136,9 +136,24 @@ CREATE TABLE `meal` (
   `breakfast` varchar(255) NOT NULL,
   `lunch` varchar(255) NOT NULL,
   `dinner` varchar(255) NOT NULL,
-  `total_cost` varchar(255) NOT NULL,
-  `total_meal` varchar(255) NOT NULL
+  `total_cost` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `meal`
+--
+
+INSERT INTO `meal` (`std_id`, `breakfast`, `lunch`, `dinner`, `total_cost`) VALUES
+('1000', '1', '1', '1', ''),
+('1001', '1', '1', '1', ''),
+('1002', '1', '1', '1', ''),
+('1003', '1', '1', '1', ''),
+('1004', '1', '1', '1', ''),
+('1005', '1', '1', '1', ''),
+('1006', '1', '1', '1', ''),
+('1007', '1', '1', '1', ''),
+('1008', '1', '1', '1', ''),
+('1009', '1', '1', '1', '');
 
 -- --------------------------------------------------------
 
@@ -150,21 +165,24 @@ CREATE TABLE `menu` (
   `day` varchar(255) NOT NULL,
   `breakfast_item` varchar(255) NOT NULL,
   `lunch_item` varchar(255) NOT NULL,
-  `dinner_item` varchar(255) NOT NULL
+  `dinner_item` varchar(255) NOT NULL,
+  `breakfast_p` varchar(255) NOT NULL,
+  `lunch_p` varchar(255) NOT NULL,
+  `dinner_p` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `menu`
 --
 
-INSERT INTO `menu` (`day`, `breakfast_item`, `lunch_item`, `dinner_item`) VALUES
-('Friday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Birani', 'Rice, Chicken'),
-('Monday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Mutton Vuna Khicuri', 'Rice, Vegitble, Egg'),
-('Saturday', 'Mutton Vuna Khicuri', 'Rice, Vorta, Fish', 'Rice, Vegitable, Chicken'),
-('Sunday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Rice, Vegitable, Chicken', 'Rice, Vorta, Fish'),
-('Thursday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Rice, Vegitable, Chicken', 'Mutton Vuna Khicuri'),
-('Tuesday', 'Mutton Vuna Khicuri', 'Rice, Vorta, Fish', 'Rice, Vegitable, Chicken'),
-('Wednesday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Rice, Vorta, Fish', 'Rice, Vegitable, Chicken');
+INSERT INTO `menu` (`day`, `breakfast_item`, `lunch_item`, `dinner_item`, `breakfast_p`, `lunch_p`, `dinner_p`) VALUES
+('Friday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Birani', 'Rice, Chicken', '30', '60', '60'),
+('Monday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Mutton Vuna Khicuri', 'Rice, Vegitble, Egg', '30', '60', '60'),
+('Saturday', 'Mutton Vuna Khicuri', 'Rice, Vorta, Fish', 'Rice, Vegitable, Chicken', '30', '60', '60'),
+('Sunday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Rice, Vegitable, Chicken', 'Rice, Vorta, Fish', '30', '60', '60'),
+('Thursday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Rice, Vegitable, Chicken', 'Mutton Vuna Khicuri', '30', '60', '60'),
+('Tuesday', 'Mutton Vuna Khicuri', 'Rice, Vorta, Fish', 'Rice, Vegitable, Chicken', '30', '60', '60'),
+('Wednesday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Rice, Vorta, Fish', 'Rice, Vegitable, Chicken', '30', '60', '60');
 
 -- --------------------------------------------------------
 
@@ -298,8 +316,7 @@ INSERT INTO `student` (`std_id`, `std_name`, `std_email`, `std_year`, `std_dept`
 ('1006', 'Tad', 'blandit@euismod.edu', '3', 'Tech Support', 'Grayvoron', '16110613 4982', 'AB+', 'Cole', '16380628 8878', '106'),
 ('1007', 'Mohammad', 'neque.vitae.semper@acmattisvelit.net', '3', 'Human Resources', 'Georgia', '16960129 0613', 'B+', 'Hasad', '16630419 1437', '107'),
 ('1008', 'Hashim', 'ipsum.Curabitur@ullamcorpereueuismod.ca', '1', 'Sales and Marketing', 'Bruck an der Mur', '16680215 4093', 'AB+', 'Madeson', '16321218 9496', '108'),
-('1009', 'Beck', 'et@egetvariusultrices.com', '2', 'Legal Department', 'Hamme', '16360802 3499', 'B-', 'Maris', '16500909 9812', '109'),
-('18511071', 'Imran Hossain', 'imranhossainrana.2014@gmail.com', '3rd', 'ICT', 'Khilkhet', '0146646446', 'O+', 'moazzem', '01546465489', '101');
+('1009', 'Beck', 'et@egetvariusultrices.com', '2', 'Legal Department', 'Hamme', '16360802 3499', 'B-', 'Maris', '16500909 9812', '109');
 
 --
 -- Indexes for dumped tables
