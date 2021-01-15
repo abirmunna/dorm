@@ -180,13 +180,14 @@
         <div class="title">Side Menu</div>
           <ul class="list-items">
           <li><a href="welcome.php"><i class="fas fa-home"></i>Home</a></li>
-          <li><a href="#"><i class="fas fa-bell"></i>Notification</a></li>
-          <li><a href="#"><i class="fas fa-address-book"></i>Meal Menu</a></li>
-          <li><a href="#"><i class="fas fa-utensils"></i>Meal</a></li>
-          <li><a href="#"><i class="fas fa-money-check"></i>Fees</a></li>
-          <li><a href="#"><i class="fas fa-exclamation-circle"></i>Complaints</a></li>
-          <li><a href="#"><i class="fas fa-phone-square-alt"></i>Emergency Contucts</a></li>
-          <li><a href="#"><i class="fas fa-unlock-alt"></i>Reset Password</a></li>
+          <li><a href="#"><i class="fas fa-bell"></i>Staff Information</a></li>
+          <li><a href="#"><i class="fas fa-address-book"></i>Student Information</a></li>
+          <li><a href="#"><i class="fas fa-address-book"></i>Send Message</a></li>
+          <li><a href="#"><i class="fas fa-utensils"></i>Meal Menu</a></li>
+          <li><a href="#"><i class="fas fa-money-check"></i>Meal</a></li>
+          <li><a href="#"><i class="fas fa-exclamation-circle"></i>Fees</a></li>
+          <li><a href="#"><i class="fas fa-phone-square-alt"></i>Complaints</a></li>
+          <li><a href="#"><i class="fas fa-unlock-alt"></i>Building Information</a></li>
           </ul>
       </nav>
     </div>
