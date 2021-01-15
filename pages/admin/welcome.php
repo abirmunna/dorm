@@ -3,18 +3,33 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
-    <!-- <title>Animated Sidebar Menu | CodingLab</title> -->
-    <link rel="stylesheet" href="../../css/welcome.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
+  <style media="screen">
+  body{
+    background: url("../../img/bk2.gif");
+    background-size: cover;
+    background-repeat: repeat;
+  }
+    .main{
+
+      /*margin-left: 350px;*/
+      width: 100%;
+      font-size: 20px;
+      margin-left: 30%;
+      margin-right: 30%;
+      background-size: cover;
+    }
+
+  </style>
 <body>
+  <!--speacial div.. do not touch it....:D-->
   <div>
   <?php include "ad_nav.php" ?>
   </div>
+  <div class="main">
+    <br><br>
+    <h2 style="color: white" style="text-align: center">WELCOME ADMIN</h2>
 
-<div>
-  <h1>Hi admin</h1>
-</div>
+  </div>
 </body>
 </html>

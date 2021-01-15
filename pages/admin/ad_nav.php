@@ -13,11 +13,6 @@
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
-    body{
-      background: url("../img/welcome_std.jpg");
-      background-size: cover;
-      background-repeat: repeat;
-    }
 
     .wrapper{
 
@@ -180,8 +175,8 @@
         <div class="title">Side Menu</div>
           <ul class="list-items">
           <li><a href="welcome.php"><i class="fas fa-home"></i>Home</a></li>
-          <li><a href="#"><i class="fas fa-bell"></i>Staff Information</a></li>
-          <li><a href="#"><i class="fas fa-address-book"></i>Student Information</a></li>
+          <li><a href="staff.php"><i class="fas fa-bell"></i>Staff Information</a></li>
+          <li><a href=""><i class="fas fa-address-book"></i>Student Information</a></li>
           <li><a href="#"><i class="fas fa-address-book"></i>Send Message</a></li>
           <li><a href="#"><i class="fas fa-utensils"></i>Meal Menu</a></li>
           <li><a href="#"><i class="fas fa-money-check"></i>Meal</a></li>
