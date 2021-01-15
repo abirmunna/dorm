@@ -41,12 +41,7 @@ else {
   }
 </script>
 <style>
-.background{
-  height: 100vh;
-  background-image: url("../../img/forget.jpg");
-  background-size: cover;
-  background-repeat: repeat;
-}
+
 </style>
   </head>
   <body>

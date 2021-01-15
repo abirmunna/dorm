@@ -15,12 +15,7 @@ else {
     <meta charset="utf-8">
     <link rel="stylesheet" href="../../css/complaint.css">
     <style>
-      .bck{
-        height: 100vh;
-        background-image: url("../../img/forget.jpg");
-        background-size: cover;
-        background-repeat: repeat;
-      }
+
     </style>
   </head>
   <script type="text/javascript">

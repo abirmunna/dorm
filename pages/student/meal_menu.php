@@ -13,13 +13,6 @@ else {
 <head>
 <meta charset="utf-8">
 <style>
-.background{
-  height: 100vh;
-  background-image: url("../../img/forget.jpg");
-  background-size: cover;
-  background-repeat: repeat;
-
-}
 .output{
   margin-left: 350px;
 }
@@ -53,9 +46,9 @@ tr:nth-child(odd){background-color: #d5e0f2}
     </div>
     <div class="output">
       <br>
-      <h1 style="color:#102c57">Every week Meal Menu list</h1>
+      <h1 style="color:orange">Every week Meal Menu list</h1>
       <?php
-        include '../../db/db.php';
+
           $sql = "SELECT * FROM menu";
           $result = mysqli_query($db, $sql);
 
@@ -83,7 +76,7 @@ tr:nth-child(odd){background-color: #d5e0f2}
           echo "</tr>";
           }
           echo "</table>";
-          mysqli_close($db);
+
       ?>
     </div>
   </div>
