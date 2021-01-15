@@ -3,20 +3,18 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../../css/meal_menu.css">
   </head>
   <body>
     <div>
       <?php include "std_nav.php" ?>
     </div>
 
-      <div class="header">
-        This is Meal Menu page
-      </div>
-        <div class="output">
-
+    <div class="output">
+        <h1>This is Meal Menu page</h1>
         <?php
         include_once '../../db/db.php';
-        session_start();
+
 
         $sql = "SELECT * FROM menu";
         $result = mysqli_query($db, $sql);
@@ -32,7 +30,7 @@
         mysqli_close($db);
 
         ?>
-</div>
+    </div>
 
 </body>
 </html>
