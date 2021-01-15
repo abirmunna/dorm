@@ -30,24 +30,10 @@
 
 	 return(true);
 }
-	<?php
-		$q=strval($_GET['q']);
-	 ?>
-
-	 	var q = "<?php echo $q ?>"
-	 	if (q == "invalid") {
-	 		alert("Invalid Username or Password");
-			let params = new URLSearchParams(url.search);
-			params.delete('q');
-	 		return true;
-	 	}
-	 	else {
-	 		
-	 	}
 
 </script>
 </head>
-<body onload="error()">
+<body>
 	<img class="wave" src="../img/wave.png">
 	<div class="container">
 		<div class="img">
@@ -78,10 +64,22 @@
 							<!--<?php// echo"<p style='color:red'>" . $q . "</p>"; ?>-->
             	<a href="forget.php">Forgot Password?</a>
             	<button type="submit" class="btn" value="submit">Login</button>
-
+							<a href="reg.php">Register</a>
             </form>
+
         </div>
     </div>
+
+
   	<script type="text/javascript" src="../js/login.js"></script>
 </body>
 </html>
+<script type="text/javascript">
+<?php
+	$q=strval($_GET['q']);
+ ?>
+var q = "<?php echo $q ?>"
+if (q == "invalid") {
+	alert("Invalid Username or Password");
+}
+</script>

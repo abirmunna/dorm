@@ -3,7 +3,9 @@ include_once '../db/db.php';
 session_start();
 $id = mysqli_real_escape_string($db, $_POST['uname']);
 $pass = mysqli_real_escape_string($db, $_POST['pwd']);
-if(strlen($id)== 4)
+echo strlen($id);
+
+if(strlen($id) == 4)
 {
   $sql = "SELECT std_id,std_pass FROM login WHERE std_id = '$id';";
   $data = mysqli_query($db, $sql);
@@ -28,7 +30,8 @@ if(strlen($id)== 4)
 
 }
 
-if (strlen($id)==1) {
+
+else if (strlen($id)==1) {
   $sql = "SELECT stf_id,stf_pass FROM login WHERE stf_id = '$id';";
   $data = mysqli_query($db, $sql);
   $check = mysqli_num_rows($data);
@@ -49,6 +52,7 @@ if (strlen($id)==1) {
       header("location: ../pages/login.php?q=invalid");
   }
 }
+
 else if($id) {
   $sql = "SELECT ad_uname,ad_pass FROM admin WHERE ad_uname = '$id';";
   $data = mysqli_query($db, $sql);
