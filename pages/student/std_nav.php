@@ -184,7 +184,7 @@
           <li><a href="meal_menu.php"><i class="fas fa-address-book"></i>Meal Menu</a></li>
           <li><a href="#"><i class="fas fa-utensils"></i>Meal</a></li>
           <li><a href="#"><i class="fas fa-money-check"></i>Fees</a></li>
-          <li><a href="#"><i class="fas fa-exclamation-circle"></i>Complaints</a></li>
+          <li><a href="complaint.php"><i class="fas fa-exclamation-circle"></i>Complaints</a></li>
           <li><a href="#"><i class="fas fa-phone-square-alt"></i>Emergency Contucts</a></li>
           <li><a href="admin/welcome.php"><i class="fas fa-unlock-alt"></i>Reset Password</a></li>
           </ul>
