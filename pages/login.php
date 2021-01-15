@@ -30,9 +30,20 @@
 
 	 return(true);
 }
-<?php
-	$q=strval($_GET['q']);
- ?>
+	<?php
+		$q=strval($_GET['q']);
+	 ?>
+
+	 	var q = "<?php echo $q ?>"
+	 	if (q == "invalid") {
+	 		alert("Invalid Username or Password");
+			let params = new URLSearchParams(url.search);
+			params.delete('q');
+	 		return true;
+	 	}
+	 	else {
+	 		
+	 	}
 
 </script>
 </head>
@@ -74,16 +85,3 @@
   	<script type="text/javascript" src="../js/login.js"></script>
 </body>
 </html>
-<script type="text/javascript">
-function error(){
-	var q = "<?php echo $q ?>"
-	if (q == "invalid") {
-		alert("Invalid Username or Password")
-		return true;
-	}
-	else {
-		return true;
-	}
-};
-
-</script>
