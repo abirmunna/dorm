@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2021 at 04:42 PM
+-- Generation Time: Jan 15, 2021 at 09:57 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -34,6 +34,14 @@ CREATE TABLE `admin` (
   `ad_pass` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`ad_id`, `ad_name`, `ad_uname`, `ad_pass`) VALUES
+(1, 'MD. ABIR HASAN MUNNA', 'munna', 'munna2222'),
+(2, 'Imran Hossain', 'imran', 'imranhei');
+
 -- --------------------------------------------------------
 
 --
@@ -51,7 +59,16 @@ CREATE TABLE `building_info` (
 --
 
 INSERT INTO `building_info` (`room_no`, `capacity`, `status`) VALUES
-('501', '2', '1');
+('100', '1', '3'),
+('101', '1', '2'),
+('102', '3', '2'),
+('103', '1', '3'),
+('104', '3', '3'),
+('105', '3', '1'),
+('106', '3', '1'),
+('107', '3', '2'),
+('108', '1', '1'),
+('109', '1', '1');
 
 -- --------------------------------------------------------
 
@@ -92,6 +109,22 @@ CREATE TABLE `login` (
   `stf_pass` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`std_id`, `std_pass`, `stf_id`, `stf_pass`) VALUES
+('1000', '123', '1', '123'),
+('1001', '123', '2', '123'),
+('1002', '123', '3', '123'),
+('1003', '123', '4', '123'),
+('1004', '123', '5', '123'),
+('1005', '123', '6', '123'),
+('1006', '123', '7', '123'),
+('1007', '123', '8', '123'),
+('1008', '123', '9', '123'),
+('1009', '123', '10', '123');
+
 -- --------------------------------------------------------
 
 --
@@ -114,11 +147,24 @@ CREATE TABLE `meal` (
 --
 
 CREATE TABLE `menu` (
-  `date` varchar(255) NOT NULL,
+  `day` varchar(255) NOT NULL,
   `breakfast_item` varchar(255) NOT NULL,
   `lunch_item` varchar(255) NOT NULL,
   `dinner_item` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `menu`
+--
+
+INSERT INTO `menu` (`day`, `breakfast_item`, `lunch_item`, `dinner_item`) VALUES
+('Friday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Birani', 'Rice, Chicken'),
+('Monday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Mutton Vuna Khicuri', 'Rice, Vegitble, Egg'),
+('Saturday', 'Mutton Vuna Khicuri', 'Rice, Vorta, Fish', 'Rice, Vegitable, Chicken'),
+('Sunday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Rice, Vegitable, Chicken', 'Rice, Vorta, Fish'),
+('Thursday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Rice, Vegitable, Chicken', 'Mutton Vuna Khicuri'),
+('Tuesday', 'Mutton Vuna Khicuri', 'Rice, Vorta, Fish', 'Rice, Vegitable, Chicken'),
+('Wednesday', 'Sliced Bread,Jam/Jelly, One egg/Banana', 'Rice, Vorta, Fish', 'Rice, Vegitable, Chicken');
 
 -- --------------------------------------------------------
 
@@ -162,7 +208,16 @@ CREATE TABLE `registration` (
 --
 
 INSERT INTO `registration` (`std_id`, `std_name`, `std_email`, `std_year`, `std_dept`, `std_address`, `std_contact`, `std_blood`, `std_gname`, `std_gcontact`) VALUES
-(18511091, 'Munna', 'abirmunna091@gmail.com', 3, 'ict', 'airport', 17658467, 'B+', 'rafiq', 171764125);
+(1010, 'Macaulay', 'Donec.fringilla@Phasellus.co.uk', 1, 'Customer Relations', 'Gloucester', 16621219, 'AB+', 'Rowan', 16800905),
+(1011, 'Merritt', 'bibendum.fermentum@eteuismodet.edu', 4, 'Asset Management', 'Gijzegem', 16580708, 'AB-', 'Oscar', 16090919),
+(1012, 'Curran', 'neque.et@luctussit.co.uk', 1, 'Public Relations', 'Vottem', 16551029, 'O-', 'Lael', 16600115),
+(1013, 'Noble', 'fames.ac@enimnec.ca', 3, 'Sales and Marketing', 'Bonnyville', 16440723, 'O+', 'Magee', 16000818),
+(1014, 'Beck', 'mollis@nonduinec.net', 2, 'Research and Development', 'Pucón', 16450326, 'AB-', 'Rina', 16660724),
+(1015, 'Marvin', 'metus.Aliquam.erat@duiCumsociis.ca', 4, 'Payroll', 'Baunatal', 16060310, 'AB-', 'Robin', 16821021),
+(1016, 'Rigel', 'netus@velitPellentesque.com', 4, 'Finances', 'Dolceacqua', 16940930, 'O-', 'Brennan', 16791109),
+(1017, 'Colton', 'in.hendrerit@Nullam.edu', 2, 'Advertising', 'Monstreux', 16570510, 'AB+', 'Tanek', 16950228),
+(1018, 'Marsden', 'hendrerit@Pellentesquetincidunt.co.uk', 1, 'Payroll', 'Covington', 16930625, 'B+', 'Breanna', 16730407),
+(1019, 'Timon', 'vitae@utsemNulla.ca', 1, 'Finances', 'Gravataí', 16530629, 'O-', 'Amir', 16720420);
 
 -- --------------------------------------------------------
 
@@ -193,6 +248,22 @@ CREATE TABLE `staff` (
   `room_no` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `staff`
+--
+
+INSERT INTO `staff` (`stf_id`, `stf_name`, `stf_address`, `stf_contact`, `stf_post`, `stf_salary`, `room_no`) VALUES
+('1', 'Aaron', 'San Mauro Marchesato', '16880803 5722', 'Asset Management', '10000', '100'),
+('10', 'Wylie', 'Bailivre', '16600506 2713', 'Finances', '14500', '101'),
+('2', 'Arsenio', 'Okigwe', '16051129 2088', 'Research and Development', '10500', '102'),
+('3', 'Yasir', 'Moio Alcantara', '16740702 0739', 'Advertising', '11000', '103'),
+('4', 'Camden', 'Muzaffargarh', '16330711 3575', 'Payroll', '11500', '104'),
+('5', 'Kasimir', 'Seydişehir', '16540718 0875', 'Advertising', '12000', '105'),
+('6', 'Alec', 'Châtellerault', '16410226 1296', 'Customer Service', '12500', '106'),
+('7', 'Judah', 'Wachtebeke', '16490106 5583', 'Advertising', '13000', '107'),
+('8', 'Asher', 'Dehradun', '16700509 2619', 'Sales and Marketing', '13500', '108'),
+('9', 'Luke', 'Isle-aux-Coudres', '16911126 9917', 'Sales and Marketing', '14000', '109');
+
 -- --------------------------------------------------------
 
 --
@@ -218,7 +289,17 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`std_id`, `std_name`, `std_email`, `std_year`, `std_dept`, `std_address`, `std_contact`, `std_blood`, `std_gname`, `std_gcontact`, `room_no`) VALUES
-('18511071', 'Imran Hossain', 'imranhossainrana.2014@gmail.com', '3rd', 'ICT', 'Khilkhet', '0146646446', 'O+', 'moazzem', '01546465489', '501');
+('1000', 'Aristotle', 'luctus.aliquet@consectetuercursuset.edu', '4', 'Customer Service', 'Bharuch', '16781019 4600', 'AB+', 'Alan', '16071213 2380', '100'),
+('1001', 'Dustin', 'dapibus.id@suscipit.co.uk', '2', 'Tech Support', 'Moricone', '16161018 3004', 'B-', 'Petra', '16160612 3659', '101'),
+('1002', 'Elliott', 'fringilla.porttitor.vulputate@erat.ca', '1', 'Asset Management', 'Hof', '16621211 3325', 'O-', 'Leigh', '16591127 8314', '102'),
+('1003', 'Ferdinand', 'sapien@urnaconvallis.ca', '4', 'Research and Development', 'Santa Juana', '16371220 4571', 'O-', 'Mira', '16770519 2198', '103'),
+('1004', 'Mason', 'Vivamus@antedictum.co.uk', '2', 'Tech Support', 'Sioux City', '16151114 1309', 'B+', 'Martin', '16051227 9233', '104'),
+('1005', 'Dillon', 'eu.accumsan@nascetur.org', '1', 'Research and Development', 'Otranto', '16990420 3610', 'A-', 'Clark', '16360727 5033', '105'),
+('1006', 'Tad', 'blandit@euismod.edu', '3', 'Tech Support', 'Grayvoron', '16110613 4982', 'AB+', 'Cole', '16380628 8878', '106'),
+('1007', 'Mohammad', 'neque.vitae.semper@acmattisvelit.net', '3', 'Human Resources', 'Georgia', '16960129 0613', 'B+', 'Hasad', '16630419 1437', '107'),
+('1008', 'Hashim', 'ipsum.Curabitur@ullamcorpereueuismod.ca', '1', 'Sales and Marketing', 'Bruck an der Mur', '16680215 4093', 'AB+', 'Madeson', '16321218 9496', '108'),
+('1009', 'Beck', 'et@egetvariusultrices.com', '2', 'Legal Department', 'Hamme', '16360802 3499', 'B-', 'Maris', '16500909 9812', '109'),
+('18511071', 'Imran Hossain', 'imranhossainrana.2014@gmail.com', '3rd', 'ICT', 'Khilkhet', '0146646446', 'O+', 'moazzem', '01546465489', '101');
 
 --
 -- Indexes for dumped tables
@@ -255,9 +336,7 @@ ALTER TABLE `fee`
 --
 ALTER TABLE `login`
   ADD UNIQUE KEY `std_id` (`std_id`),
-  ADD UNIQUE KEY `std_pass` (`std_pass`),
-  ADD UNIQUE KEY `stf_id` (`stf_id`),
-  ADD UNIQUE KEY `stf_pass` (`stf_pass`);
+  ADD UNIQUE KEY `stf_id` (`stf_id`);
 
 --
 -- Indexes for table `meal`
@@ -269,14 +348,13 @@ ALTER TABLE `meal`
 -- Indexes for table `menu`
 --
 ALTER TABLE `menu`
-  ADD PRIMARY KEY (`date`);
+  ADD PRIMARY KEY (`day`);
 
 --
 -- Indexes for table `notification`
 --
 ALTER TABLE `notification`
-  ADD UNIQUE KEY `std_id` (`std_id`),
-  ADD KEY `std_id_2` (`std_id`);
+  ADD UNIQUE KEY `std_id` (`std_id`);
 
 --
 -- Indexes for table `registration`
@@ -313,7 +391,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `ad_id` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `ad_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `fee`
@@ -326,59 +404,6 @@ ALTER TABLE `fee`
 --
 ALTER TABLE `salary`
   MODIFY `salary_id` int(20) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `complaints`
---
-ALTER TABLE `complaints`
-  ADD CONSTRAINT `complaints_ibfk_1` FOREIGN KEY (`std_id`) REFERENCES `student` (`std_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `fee`
---
-ALTER TABLE `fee`
-  ADD CONSTRAINT `fee_ibfk_1` FOREIGN KEY (`std_id`) REFERENCES `student` (`std_id`);
-
---
--- Constraints for table `login`
---
-ALTER TABLE `login`
-  ADD CONSTRAINT `login_ibfk_1` FOREIGN KEY (`std_id`) REFERENCES `student` (`std_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `login_ibfk_2` FOREIGN KEY (`stf_id`) REFERENCES `staff` (`stf_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `meal`
---
-ALTER TABLE `meal`
-  ADD CONSTRAINT `meal_ibfk_1` FOREIGN KEY (`std_id`) REFERENCES `student` (`std_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `notification`
---
-ALTER TABLE `notification`
-  ADD CONSTRAINT `notification_ibfk_1` FOREIGN KEY (`std_id`) REFERENCES `student` (`std_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `salary`
---
-ALTER TABLE `salary`
-  ADD CONSTRAINT `salary_ibfk_1` FOREIGN KEY (`stf_id`) REFERENCES `staff` (`stf_id`);
-
---
--- Constraints for table `staff`
---
-ALTER TABLE `staff`
-  ADD CONSTRAINT `staff_ibfk_1` FOREIGN KEY (`room_no`) REFERENCES `building_info` (`room_no`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `student`
---
-ALTER TABLE `student`
-  ADD CONSTRAINT `student_ibfk_1` FOREIGN KEY (`room_no`) REFERENCES `building_info` (`room_no`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

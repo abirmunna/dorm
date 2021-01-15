@@ -18,11 +18,11 @@ if(strlen($id)== 4)
         header("location: ../pages/student/welcome.php");
     }
     else {
-      header("location: ../pages/login.php");
+      header("location: ../pages/login.php?q=invalid");
     }
   }
   else {
-      header("location: ../pages/login.php");
+      header("location: ../pages/login.php?q=invalid");
   }
 
 
@@ -42,11 +42,11 @@ if (strlen($id)==1) {
         header("location: ../pages/staff/welcome.php");
     }
     else {
-      header("location: ../pages/login.php");
+      header("location: ../pages/login.php?q=invalid");
     }
   }
   else {
-      header("location: ../pages/login.php");
+      header("location: ../pages/login.php?q=invalid");
   }
 }
 else if($id) {
@@ -63,10 +63,10 @@ else if($id) {
         header("location: ../pages/admin/welcome.php");
     }
     else {
-      header("location: ../pages/login.php");
+      header("location: ../pages/login.php?q=invalid");
     }
   }
   else {
-      header("location: ../pages/login.php");
+      header("location: ../pages/login.php?q=invalid");
   }
 }

@@ -32,16 +32,11 @@
 }
 <?php
 	$q=strval($_GET['q']);
-	if($q){
-		$q = "Invalid Username or Password";
-	}
-	else{
-		$q="";
-	}
  ?>
+
 </script>
 </head>
-<body>
+<body onload="error()">
 	<img class="wave" src="../img/wave.png">
 	<div class="container">
 		<div class="img">
@@ -69,7 +64,7 @@
            		    	<input name="pwd" type="password" class="input">
             	   </div>
             	</div>
-							<?php echo"<p style='color:red'>" . $q . "</p>"; ?>
+							<!--<?php// echo"<p style='color:red'>" . $q . "</p>"; ?>-->
             	<a href="forget.php">Forgot Password?</a>
             	<button type="submit" class="btn" value="submit">Login</button>
 
@@ -79,3 +74,16 @@
   	<script type="text/javascript" src="../js/login.js"></script>
 </body>
 </html>
+<script type="text/javascript">
+function error(){
+	var q = "<?php echo $q ?>"
+	if (q == "invalid") {
+		alert("Invalid Username or Password")
+		return true;
+	}
+	else {
+		return true;
+	}
+};
+
+</script>
