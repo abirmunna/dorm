@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2021 at 05:21 PM
+-- Generation Time: Jan 15, 2021 at 07:07 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -105,6 +105,7 @@ CREATE TABLE `fee` (
 CREATE TABLE `login` (
   `std_id` varchar(255) NOT NULL,
   `std_pass` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `stf_id` varchar(255) NOT NULL,
   `stf_pass` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -113,17 +114,17 @@ CREATE TABLE `login` (
 -- Dumping data for table `login`
 --
 
-INSERT INTO `login` (`std_id`, `std_pass`, `stf_id`, `stf_pass`) VALUES
-('1000', '123', '1', '123'),
-('1001', '123', '2', '123'),
-('1002', '123', '3', '123'),
-('1003', '123', '4', '123'),
-('1004', '123', '5', '123'),
-('1005', '123', '6', '123'),
-('1006', '123', '7', '123'),
-('1007', '123', '8', '123'),
-('1008', '123', '9', '123'),
-('1009', '123', '10', '123');
+INSERT INTO `login` (`std_id`, `std_pass`, `email`, `stf_id`, `stf_pass`) VALUES
+('1000', '123', 'abirmunna091@gmail.com', '1', '123'),
+('1001', '123', 'imranhossainrana.2014@gmail.com', '2', '123'),
+('1002', '123', '', '3', '123'),
+('1003', '123', '', '4', '123'),
+('1004', '123', '', '5', '123'),
+('1005', '123', '', '6', '123'),
+('1006', '123', '', '7', '123'),
+('1007', '123', '', '8', '123'),
+('1008', '123', '', '9', '123'),
+('1009', '123', '', '10', '123');
 
 -- --------------------------------------------------------
 
