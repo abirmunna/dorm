@@ -13,7 +13,7 @@ if(strlen($id) == 4)
   if ($check > 0) {
     $get = mysqli_fetch_assoc($data);
 
-    if($id === $get['std_id'] && $pass === $get['std_pass'])
+    if($id === $get['std_id'] && password_verify($pass, $get['std_pass']))
     {
       $_SESSION['id'] = $get['std_id'];
       if (isset($_SESSION['id'])) {
@@ -36,7 +36,7 @@ else if($id) {
   if ($check > 0) {
     $get = mysqli_fetch_assoc($data);
 
-    if($id === $get['ad_uname'] && $pass === $get['ad_pass'])
+    if($id === $get['ad_uname'] && password_verify($pass, $get['ad_pass']))
     {
       $_SESSION['id'] = $get['ad_uname'];
         header("location: ../pages/admin/welcome.php");
