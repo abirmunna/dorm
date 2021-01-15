@@ -14,6 +14,7 @@
   margin-left: 310px;
 }
 h1{
+  margin-top: 30px;
   text-align: center;
   margin-left: -150px;
 }
@@ -43,33 +44,25 @@ tr:nth-child(odd){background-color: #d5e0f2}
     </div>
     <div class="output">
       <br>
-      <h1 style="color:#102c57">Staff Information</h1>
+      <h1 style="color:#102c57">Building Information</h1><br>
       <?php
         include '../../db/db.php';
-          $sql = "SELECT * FROM staff";
+          $sql = "SELECT * FROM building_info";
           $result = mysqli_query($db, $sql);
 
           echo "<table border='3'>
           <tr>
-          <th>Staff ID</th>
-          <th>Staff Name</th>
-          <th>Address</th>
-          <th>Contact</th>
-          <th>Post</th>
-          <th>Salary</th>
           <th>Room No</th>
+          <th>Capacity</th>
+          <th>Status</th>
           </tr>";
 
           while($row = mysqli_fetch_array($result)){
 
           echo "<tr>";
-          echo "<td>"  . $row['stf_id'] . "</td>";
-          echo "<td>" . $row['stf_name'] . "</td>";
-          echo "<td>" . $row['stf_address'] . "</td>";
-          echo "<td>" . $row['stf_contact'] . "</td>";
-          echo "<td>" . $row['stf_post'] . "</td>";
-          echo "<td>" . $row['stf_salary'] . "</td>";
-          echo "<td>" . $row['room_no'] . "</td>";
+          echo "<td>"  . $row['room_no'] . "</td>";
+          echo "<td>" . $row['capacity'] . "</td>";
+          echo "<td>" . $row['status'] . "</td>";
           echo "</tr>";
           }
           echo "</table>";

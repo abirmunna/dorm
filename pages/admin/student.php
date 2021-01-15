@@ -11,11 +11,11 @@
 
 }
 .output{
-  margin-left: 310px;
+  margin-left: 300px;
 }
 h1{
   text-align: center;
-  margin-left: -150px;
+    margin-left: -100px;
 }
 table {
   border-collapse: collapse;
@@ -25,8 +25,9 @@ table {
 }
 
 th, td {
+  font-size: 13px;
   text-align: left;
-  padding: 8px;
+  padding: 6px;
   border: 3px solid #3c424d;
 
 }
@@ -43,32 +44,40 @@ tr:nth-child(odd){background-color: #d5e0f2}
     </div>
     <div class="output">
       <br>
-      <h1 style="color:#102c57">Staff Information</h1>
+      <h1 style="color:#102c57">Student Information</h1>
       <?php
         include '../../db/db.php';
-          $sql = "SELECT * FROM staff";
+          $sql = "SELECT * FROM student";
           $result = mysqli_query($db, $sql);
 
           echo "<table border='3'>
           <tr>
-          <th>Staff ID</th>
-          <th>Staff Name</th>
+          <th>Student ID</th>
+          <th>Student Name</th>
+          <th>Department</th>
+          <th>Year</th>
           <th>Address</th>
           <th>Contact</th>
-          <th>Post</th>
-          <th>Salary</th>
+          <th>Email</th>
+          <th>Blood</th>
+          <th>Guardian's Name</th>
+          <th>Guardian's Contact</th>
           <th>Room No</th>
           </tr>";
 
           while($row = mysqli_fetch_array($result)){
 
           echo "<tr>";
-          echo "<td>"  . $row['stf_id'] . "</td>";
-          echo "<td>" . $row['stf_name'] . "</td>";
-          echo "<td>" . $row['stf_address'] . "</td>";
-          echo "<td>" . $row['stf_contact'] . "</td>";
-          echo "<td>" . $row['stf_post'] . "</td>";
-          echo "<td>" . $row['stf_salary'] . "</td>";
+          echo "<td>"  . $row['std_id'] . "</td>";
+          echo "<td>" . $row['std_name'] . "</td>";
+          echo "<td>" . $row['std_dept'] . "</td>";
+          echo "<td>" . $row['std_year'] . "</td>";
+          echo "<td>" . $row['std_address'] . "</td>";
+          echo "<td>" . $row['std_contact'] . "</td>";
+          echo "<td>" . $row['std_email'] . "</td>";
+          echo "<td>" . $row['std_blood'] . "</td>";
+          echo "<td>" . $row['std_gname'] . "</td>";
+          echo "<td>" . $row['std_gcontact'] . "</td>";
           echo "<td>" . $row['room_no'] . "</td>";
           echo "</tr>";
           }
