@@ -1,9 +1,7 @@
 *{
-	padding: 0;
 	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
-}
-.output{
-  margin-top: 40px;
-  margin-left: 350px;
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
 }
