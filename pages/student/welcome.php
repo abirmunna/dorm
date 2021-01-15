@@ -10,6 +10,9 @@
   <div>
   <?php include "std_nav.php" ?>
   </div>
+  <div class="main">
+    <h2 style="color: orange" style="text-align: center">WEKCOME TO DORM MANAGEMENT SYSTEM</h2>
 
+  </div>
 </body>
 </html>
