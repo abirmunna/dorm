@@ -54,8 +54,6 @@ else {
         <br>  <br>
         <h1 style="color:#102c57">Notifications</h1>
           <?php
-
-
           $sql = "SELECT * FROM notification WHERE std_id= 18511071;";
           $result = mysqli_query($db, $sql);
 
@@ -87,7 +85,7 @@ else {
           } else {
             echo "No Notification";
           }
-          mysqli_close($db);
+          
           ?>
         </div>
       </div>
