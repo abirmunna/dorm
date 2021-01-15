@@ -14,7 +14,7 @@
       font-family: 'Poppins', sans-serif;
     }
     body{
-      background: url("../img/welcome_std.jpg");
+      background: url("../../img/home.jpg");
       background-size: cover;
       background-repeat: repeat;
     }
