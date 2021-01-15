@@ -48,7 +48,7 @@ else {
   <body>
     <div class="background">
       <div>
-        <?php include "std_nav.php" ?>
+        <?php include "std_nav.php"?>
       </div>
       <div class="output">
         <br>  <br>
