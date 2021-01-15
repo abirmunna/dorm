@@ -1,5 +1,19 @@
+<?php
+session_start();
+include "../../db/db.php";
+if (isset($_SESSION['id'])) {
+  $id = $_SESSION['id'];
+  $sql = "SELECT * FROM student WHERE std_id = '$id';";
+  $data = mysqli_query($db,$sql);
+  $check = mysqli_num_rows($data);
+  if ($check > 0) {
+    $get = mysqli_fetch_array($data);
+    $name = $get['std_name'];
+  }
+}
+ ?>
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -8,24 +22,86 @@
 
     .main{
 
-      /*margin-left: 350px;*/
+
       width: 60%;
       font-size: 20px;
       margin-left: 30%;
       margin-right: 30%;
       background-size: cover;
     }
+    .flip-card {
+      background-color: transparent;
+      width: 450px;
+      height: 400px;
+      perspective: 1000px;
+      margin-left: 125px;
+      margin-top: 30px;
+    }
 
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      background-color: #e81a32;
+      opacity: 0.8;
+      color: black;
+    }
+
+    .flip-card-back {
+      background-color: #0d6d78;
+      color: white;
+      transform: rotateY(180deg);
+    }
+    .info{
+      text-align: left;
+      margin-left: 50px;
+    }
   </style>
 <body>
-  <!--speacial div.. do not touch it....:D-->
+
   <div>
   <?php include "std_nav.php" ?>
   </div>
   <div class="main">
     <br><br>
     <h2 style="color: orange" style="text-align: center">WELCOME TO DORM MANAGEMENT SYSTEM</h2>
-
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="../../img/avatar.svg" alt="Avatar" style="width:450px;height:400px;">
+        </div>
+        <div class="flip-card-back"><br>
+          <h1><?php echo($name) ?></h1>
+          <br>
+          <div class="info">
+            <p>ID: <?php echo($get['std_id']) ?></p>
+            <p>Year: <?php echo($get['std_year']) . "rd" ?></p>
+            <p>Department: <?php echo($get['std_dept']) ?></p>
+            <p>Phone No: <?php echo($get['std_contact']) ?></p>
+            <p>Email: <?php echo($get['std_email']) ?></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

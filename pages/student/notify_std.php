@@ -1,5 +1,10 @@
-<!DOCTYPE html>
-
+<?php
+session_start();
+include "../../db/db.php";
+if (isset($_SESSION['id'])) {
+  $id = $_SESSION['id'];
+}
+?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -46,7 +51,7 @@
         <br>  <br>
         <h1 style="color:#102c57">Notifications</h1>
           <?php
-          include '../../db/db.php';
+
 
           $sql = "SELECT * FROM notification WHERE std_id= 18511071;";
           $result = mysqli_query($db, $sql);

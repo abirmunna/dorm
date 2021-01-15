@@ -3,7 +3,6 @@ include_once '../db/db.php';
 session_start();
 $id = mysqli_real_escape_string($db, $_POST['uname']);
 $pass = mysqli_real_escape_string($db, $_POST['pwd']);
-echo strlen($id);
 
 if(strlen($id) == 4)
 {
@@ -17,7 +16,9 @@ if(strlen($id) == 4)
     if($id === $get['std_id'] && $pass === $get['std_pass'])
     {
       $_SESSION['id'] = $get['std_id'];
+      if (isset($_SESSION['id'])) {
         header("location: ../pages/student/welcome.php");
+      }
     }
     else {
       header("location: ../pages/login.php?q=invalid");
