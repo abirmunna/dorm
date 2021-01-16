@@ -24,4 +24,8 @@ $query = "INSERT INTO student(std_id, std_name, std_email, std_year, std_dept, s
 VALUES ('$id','$name','$email','$year','$dept','$address','$contact','$blood','$gname','$gcontact','$room');";
 mysqli_query($db, $query);
 
+$query1 = "DELETE from registration where std_id = $id;";
+mysqli_query($db, $query1);
+
+header("location: ../pages/admin/applicant.php");
  ?>
