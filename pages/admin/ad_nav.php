@@ -193,10 +193,10 @@
         <div class="title">  <a href="logout.php"><button class="button button2">Log Out</button></a></div>
           <ul class="list-items">
           <li><a href="welcome.php"><i class="fas fa-home"></i>Home</a></li>
-        
+
           <li><a href="student.php"><i class="fas fa-address-book"></i>Student Information</a></li>
           <li><a href="ad_msg.php"><i class="fas fa-address-book"></i>Send Message</a></li>
-          <li><a href="#"><i class="fas fa-exclamation-circle"></i>Fees</a></li>
+        
           <li><a href="view_comp.php"><i class="fas fa-phone-square-alt"></i>Complaints</a></li>
           <li><a href="building_info.php"><i class="fas fa-unlock-alt"></i>Building Information</a></li>
           <li><a href="applicant.php"><i class="fas fa-unlock-alt"></i>Applicant</a></li>
