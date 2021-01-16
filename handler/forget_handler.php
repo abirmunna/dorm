@@ -2,15 +2,16 @@
 include "../db/db.php";
 $id = mysqli_real_escape_string($db, $_POST['std_id']);
 $gmail = mysqli_real_escape_string($db, $_POST['std_email']);
+$random = rand();
+$random = strval($random);
 
-$sql = "SELECT * FROM login WHERE std_id = '$id';";
+$sql = "INSERT INTO pass_reset(random, email) VALUES('$random', '$gmail');";
 $data = mysqli_query($db, $sql);
-$row = mysqli_fetch_array($data);
 
-if ($row['email'] == $gmail) {
+if ($gmail) {
   $to_email = $gmail;
   $subject = "Reset password for you dorm web application";
-  $body = $row['std_pass'];
+  $body = "Please go to this url to reset your password localhost/dorm/reset.php?q=" . $random;
   $headers = "From: dormitorymanagement719091@gmail.com";
 
   if (mail($to_email, $subject, $body, $headers)) {
