@@ -161,7 +161,25 @@
       font-size: 40px;
       font-weight: 700;
     }
-
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 10px;
+      margin-bottom: 30px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s; /* Safari */
+      transition-duration: 0.4s;
+      border-radius: 30px;
+    }
+    .button2:hover {
+      box-shadow: 0 12px 16px 0 #266e2f,0 17px 50px 0 #266e2f;
+    }
     </style>
   </head>
   <body>
@@ -172,14 +190,12 @@
         <i class="fas fa-times"></i>
       </label>
       <nav id="sidebar">
-        <div class="title">Side Menu</div>
+        <div class="title">  <a href="logout.php"><button class="button button2">Log Out</button></a></div>
           <ul class="list-items">
           <li><a href="welcome.php"><i class="fas fa-home"></i>Home</a></li>
           <li><a href="staff.php"><i class="fas fa-bell"></i>Staff Information</a></li>
           <li><a href="student.php"><i class="fas fa-address-book"></i>Student Information</a></li>
           <li><a href="ad_msg.php"><i class="fas fa-address-book"></i>Send Message</a></li>
-          <li><a href="#"><i class="fas fa-utensils"></i>Meal Menu</a></li>
-          <li><a href="#"><i class="fas fa-money-check"></i>Meal</a></li>
           <li><a href="#"><i class="fas fa-exclamation-circle"></i>Fees</a></li>
           <li><a href="view_comp.php"><i class="fas fa-phone-square-alt"></i>Complaints</a></li>
           <li><a href="building_info.php"><i class="fas fa-unlock-alt"></i>Building Information</a></li>
