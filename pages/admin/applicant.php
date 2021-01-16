@@ -12,9 +12,10 @@ else {
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
+<link rel="stylesheet" href="../../css/complaint.css">
 <style>
 .background{
-  height: 100vh;
+  height: 100%;
   background-image: url("../../img/forget.jpg");
   background-size: cover;
   background-repeat: repeat;
@@ -22,6 +23,7 @@ else {
 }
 .output{
   margin-left: 300px;
+  margin-bottom: 10px;
 }
 h1{
   text-align: center;
@@ -41,7 +43,11 @@ th, td {
   border: 3px solid #3c424d;
 
 }
-
+.form{
+  margin-left: 350px;
+  width: 50%;
+  margin-bottom: 60px;
+}
 tr:nth-child(even){background-color: #a9bbdb}
 tr:nth-child(odd){background-color: #d5e0f2}
 
@@ -93,25 +99,24 @@ tr:nth-child(odd){background-color: #d5e0f2}
           mysqli_close($db);
       ?>
     </div>
-  </div>
-  <div class="">
-    <form name = "myForm" action="../../handler/applicant_handler.php" method="post" onsubmit = "return(validate());">
-      <div class="form_wrap">
-          <div class="input_wrap">
-            <label id="std_id">Student ID</label>
-            <input type="text" name="std_id" id="std_id" placeholder="Enter student Id">
-          </div>
-          <div class="input_wrap">
-            <label id="msg">Select Room Number</label>
-            <input type="text" name="room" id="room" placeholder="Enter room number">
-          </div>
+    <div class="form">
+      <form name = "myForm" action="../../handler/applicant_handler.php" method="post" onsubmit = "return(validate());">
+        <div class="form_wrap">
+            <div class="input_wrap">
+              <label id="std_id">Student ID</label>
+              <input type="text" name="std_id" id="std_id" placeholder="Enter student Id">
+            </div>
+            <div class="input_wrap">
+              <label id="msg">Select Room Number</label>
+              <input type="text" name="room" id="room" placeholder="Enter room number">
+            </div>
 
-        <div class="input_wrap">
-          <input type="submit" value="Approve" class="submit_btn">
+          <div class="input_wrap">
+            <input type="submit" value="Approve" class="submit_btn">
+          </div>
         </div>
-      </div>
-    </form>
-  </div>
+      </form>
+    </div>
   </div>
 
 </body>
