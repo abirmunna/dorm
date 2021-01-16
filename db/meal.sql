@@ -27,15 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `meal`
 --
 
-CREATE TABLE `meal` (
-  `std_id` varchar(255) NOT NULL,
-  `breakfast` varchar(255) NOT NULL,
-  `lunch` varchar(255) NOT NULL,
-  `dinner` varchar(255) NOT NULL,
-  `total_cost` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
 -- Dumping data for table `meal`
 --
 

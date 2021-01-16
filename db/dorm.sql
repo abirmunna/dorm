@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2021 at 11:41 PM
+-- Generation Time: Jan 16, 2021 at 03:23 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -39,8 +39,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`ad_id`, `ad_name`, `ad_uname`, `ad_pass`) VALUES
-(1, 'MD. ABIR HASAN MUNNA', 'munna', 'munna2222'),
-(2, 'Imran Hossain', 'imran', 'imranhei');
+(1, 'MD. ABIR HASAN MUNNA', 'munna', '$2y$10$2LJvXuubCiOIrFrBHkMqheJ1QtzL0MSkZf8dKR.3B6RzNEmh6EcV6'),
+(2, 'Imran Hossain', 'imran', '$2y$10$R1svm.7hVG2dxC1PhWntK.Fr9ShrUhkygEAT5I1Vr6FdYU1Vh4sy.');
 
 -- --------------------------------------------------------
 
@@ -113,16 +113,16 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`std_id`, `std_pass`, `email`) VALUES
-('1000', '123', 'abirmunna091@gmail.com'),
-('1001', '123', 'imranhossainrana.2014@gmail.com'),
-('1002', '123', 'arif@juniv.edu'),
-('1003', '123', ''),
-('1004', '123', ''),
-('1005', '123', ''),
-('1006', '123', ''),
-('1007', '123', ''),
-('1008', '123', ''),
-('1009', '123', '');
+('1000', '$2y$10$jeKFysgSeXo/FdQSusJF0enxbGk3xY.J904NZ2KcyhD0q2T.SsAQy', 'abirmunna091@gmail.com'),
+('1001', '$2y$10$QNNY0bmJ92WXAml0WfsLdOSND7QWiibrVcZBT7QWPnF.6nUyo5TAW', 'imranhossainrana.2014@gmail.com'),
+('1002', '$2y$10$19SqKi7TN3pCB5PcuX9vieYX7yspekg4dDbh9eRqNQAGEUquLxdLG', 'arif@juniv.edu'),
+('1003', '$2y$10$ue6GwAPp3e2ovLtV8K8CQuZTvA2BgZvPGxZcVsH6viohM8qqf65De', ''),
+('1004', '$2y$10$Srp8hZ9ak7.6ofUiQNr8SeOlnRipg2nigKrySNPKP6F24VYt/Xe5e', ''),
+('1005', '$2y$10$D.H1qp6MHrfDneWNVHanoeVjMJbru/78Lj3m9.u8f0AgIelZn1gC2', ''),
+('1006', '$2y$10$OOikvsi2Lerp1APiWcx3duSkIyt8s1naUMhT3wN2VEGbi8t5hSiC.', ''),
+('1007', '$2y$10$OrCEiemQ2Jv.hUG0z5fkf.HMVpouwxeZUC2CW1TytEskWWY3b.quS', ''),
+('1008', '$2y$10$pItW0tQ9OtyJHaD/n1JiyepqFNc6mjI5igWbxIJUFvE9akVhano7.', ''),
+('1009', '$2y$10$7BKB2z6PkGSaAP0YNP70Zuh2vhfTvZjtpYWctShDxvxsnILwFxjAi', '');
 
 -- --------------------------------------------------------
 
@@ -143,16 +143,16 @@ CREATE TABLE `meal` (
 --
 
 INSERT INTO `meal` (`std_id`, `breakfast`, `lunch`, `dinner`, `total_cost`) VALUES
-('1000', '1', '1', '1', ''),
-('1001', '1', '1', '1', ''),
-('1002', '1', '1', '1', ''),
-('1003', '1', '1', '1', ''),
-('1004', '1', '1', '1', ''),
-('1005', '1', '1', '1', ''),
-('1006', '1', '1', '1', ''),
-('1007', '1', '1', '1', ''),
-('1008', '1', '1', '1', ''),
-('1009', '1', '1', '1', '');
+('1000', '25', '22', '26', '3630'),
+('1001', '24', '16', '24', '3120'),
+('1002', '19', '15', '24', '2910'),
+('1003', '19', '21', '25', '3330'),
+('1004', '21', '24', '24', '3510'),
+('1005', '25', '21', '25', '3510'),
+('1006', '21', '17', '24', '3090'),
+('1007', '24', '23', '24', '3540'),
+('1008', '21', '24', '20', '3270'),
+('1009', '23', '16', '21', '2910');
 
 -- --------------------------------------------------------
 
@@ -201,7 +201,25 @@ CREATE TABLE `notification` (
 --
 
 INSERT INTO `notification` (`std_id`, `msg`, `date`, `time`) VALUES
-('18511071', 'Very good student :)', '16/1/2021', '6');
+('', 'Very good student :)', '16/1/2021', '6');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pass_reset`
+--
+
+CREATE TABLE `pass_reset` (
+  `random` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pass_reset`
+--
+
+INSERT INTO `pass_reset` (`random`, `email`) VALUES
+('1082953743', 'abirmunna091@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -321,12 +339,6 @@ ALTER TABLE `meal`
 --
 ALTER TABLE `menu`
   ADD PRIMARY KEY (`day`);
-
---
--- Indexes for table `notification`
---
-ALTER TABLE `notification`
-  ADD UNIQUE KEY `std_id` (`std_id`);
 
 --
 -- Indexes for table `registration`
