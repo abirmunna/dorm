@@ -94,6 +94,25 @@ tr:nth-child(odd){background-color: #d5e0f2}
       ?>
     </div>
   </div>
+  <div class="">
+    <form name = "myForm" action="../../handler/applicant_handler.php" method="post" onsubmit = "return(validate());">
+      <div class="form_wrap">
+          <div class="input_wrap">
+            <label id="std_id">Student ID</label>
+            <input type="text" name="std_id" id="std_id" placeholder="Enter student Id">
+          </div>
+          <div class="input_wrap">
+            <label id="msg">Select Room Number</label>
+            <input type="text" name="room" id="room" placeholder="Enter room number">
+          </div>
+
+        <div class="input_wrap">
+          <input type="submit" value="Approve" class="submit_btn">
+        </div>
+      </div>
+    </form>
+  </div>
+  </div>
 
 </body>
 </html>
