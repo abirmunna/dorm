@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2021 at 03:23 AM
+-- Generation Time: Jan 16, 2021 at 03:55 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.0
 
@@ -92,9 +92,24 @@ CREATE TABLE `fee` (
   `fee_id` int(20) NOT NULL,
   `std_id` varchar(255) NOT NULL,
   `total_fee` varchar(255) NOT NULL,
-  `month` varchar(255) NOT NULL,
   `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `fee`
+--
+
+INSERT INTO `fee` (`fee_id`, `std_id`, `total_fee`, `status`) VALUES
+(1, '1000', '3630', '1'),
+(2, '1001', '3120', '1'),
+(3, '1002', '2910', '0'),
+(4, '1003', '3330', '0'),
+(5, '1004', '3510', '1'),
+(6, '1005', '3510', '0'),
+(7, '1006', '3090', '1'),
+(8, '1007', '3540', '1'),
+(9, '1008', '3270', '0'),
+(10, '1009', '2910', '1');
 
 -- --------------------------------------------------------
 
@@ -367,7 +382,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `fee`
 --
 ALTER TABLE `fee`
-  MODIFY `fee_id` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `fee_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
