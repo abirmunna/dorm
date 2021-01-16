@@ -14,6 +14,9 @@ else {
 <meta charset="utf-8">
 <link rel="stylesheet" href="../../css/complaint.css">
 <style>
+body{
+  background: gray;
+}
 .background{
   height: 100%;
   background-image: url("../../img/forget.jpg");
